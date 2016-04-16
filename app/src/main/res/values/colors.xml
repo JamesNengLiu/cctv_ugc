@@ -3,4 +3,17 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="deepBule">#204b99</color>
+    <color name="midBule">#1e80bf</color>
+    <color name="lightBule">#c6cee3</color>
+    
+    <color name="btnNomal">@color/midBule</color>
+    <color name="btnPress">#1a6799</color>
+
+    <color name="divider">#d7d7d7</color>
+
+    <color name="black">#333000</color>
+    <color name="deepGray">#777000</color>
+    <color name="midGray">#aaa000</color>
 </resources>
