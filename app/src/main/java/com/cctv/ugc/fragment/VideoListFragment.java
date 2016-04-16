@@ -1,11 +1,13 @@
 package com.cctv.ugc.fragment;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
 import com.cctv.ugc.R;
+import com.cctv.ugc.activity.ChooseNewsTypeActivity_;
 import com.cctv.ugc.model.Response.VideoTimelineResponse;
 import com.cctv.ugc.model.VideoListItem;
 import com.cctv.ugc.network.UgcClient;
@@ -62,7 +64,7 @@ public class VideoListFragment extends Fragment {
 
     @Click(R.id.submit)
     void clickToUploadVideo(){
-
+        getActivity().startActivity(new Intent(getActivity(), ChooseNewsTypeActivity_.class));
     }
 
 }

@@ -1,10 +1,8 @@
 package com.cctv.ugc.fileuploader;
 
 import android.content.Context;
-import android.content.Intent;
-import android.util.Log;
 
-import com.cctv.ugc.App;
+import com.cctv.ugc.base.App;
 import com.cctv.ugc.account.LoginManager;
 import com.cctv.ugc.net.ServerApi;
 
@@ -17,7 +15,6 @@ import java.net.MalformedURLException;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import bolts.Continuation;
 import bolts.ExtExecutors;
 import bolts.Task;
 

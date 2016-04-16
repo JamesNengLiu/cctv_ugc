@@ -1,8 +1,8 @@
-package com.cctv.ugc;
+package com.cctv.ugc.base;
 
-import android.app.Application;
 import android.content.Context;
 
+import com.cctv.ugc.Env;
 import com.umeng.analytics.MobclickAgent;
 
 import org.litepal.LitePalApplication;

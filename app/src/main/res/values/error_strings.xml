@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--找不到文件管理器-->
+    <string name="error1">找不到文件管理器</string>
+</resources>
