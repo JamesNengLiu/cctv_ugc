@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="187dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:scaleType="centerCrop"
+        tools:src="@mipmap/list_image_placeholder"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:maxEms="10"
+        android:textColor="@color/midGray"
+        android:textSize="21sp"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/midGray"
+        android:textSize="12sp"
+        tools:text="12sp" />
+
+    <TextView
+        android:id="@+id/play_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/image_count"
+        android:layout_marginRight="3dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:drawableLeft="@mipmap/icon_play"
+        android:textColor="@color/midGray"
+        android:drawablePadding="3dp"
+        android:textSize="12sp"
+        tools:text="100" />
+
+    <TextView
+        android:id="@+id/image_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginRight="16dp"
+        android:drawablePadding="3dp"
+        android:drawableLeft="@mipmap/icon_image"
+        android:textColor="@color/midGray"
+        android:textSize="12sp"
+        tools:text="100" />
+
+
+</RelativeLayout>
