@@ -1,5 +1,2 @@
 include ':app'
-include ':okhttp3'
-include ':okhttp-urlconnection'
-include ':okio'
 include ':uploadservice'

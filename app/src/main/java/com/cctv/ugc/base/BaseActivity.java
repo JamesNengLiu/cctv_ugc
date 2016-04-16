@@ -1,13 +1,13 @@
 package com.cctv.ugc.base;
 
-import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 
 import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created by liuxin on 16/4/5.
  */
-public class BaseActivity extends Activity{
+public class BaseActivity extends AppCompatActivity{
 
 
     public void onResume() {
@@ -18,4 +18,5 @@ public class BaseActivity extends Activity{
         super.onPause();
         MobclickAgent.onPause(this);
     }
+
 }
