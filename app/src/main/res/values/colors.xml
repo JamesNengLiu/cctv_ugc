@@ -13,7 +13,7 @@
 
     <color name="divider">#d7d7d7</color>
 
-    <color name="black">#333000</color>
-    <color name="deepGray">#777000</color>
-    <color name="midGray">#aaa000</color>
+    <color name="black">#333</color>
+    <color name="deepGray">#777</color>
+    <color name="midGray">#aaa</color>
 </resources>
