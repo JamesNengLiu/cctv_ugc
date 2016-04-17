@@ -43,11 +43,11 @@ public class VideoListFragment extends Fragment {
     @AfterViews
     void initView(){
         mListView.setAdapter(mAdapter);
-        fetchTimeline();
     }
 
     @Background
     void fetchTimeline(){
+        initLoadViews();
         mClient = UgcClient_.getInstance_(getContext());
         VideoTimelineResponse response = mClient.fetchVideoTimeline(0, 20);
         if(response.ok()){
@@ -57,14 +57,35 @@ public class VideoListFragment extends Fragment {
 
     @UiThread
     @IgnoredWhenDetached
+    void initLoadViews(){
+        mListView.setVisibility(View.GONE);
+        mProgress.setVisibility(View.VISIBLE);
+    }
+
+    @UiThread
+    @IgnoredWhenDetached
     void updateView(List<VideoListItem> list){
         mProgress.setVisibility(View.GONE);
+        mListView.setVisibility(View.VISIBLE);
         mAdapter.update(list);
+        mListView.setSelectionAfterHeaderView();
     }
 
     @Click(R.id.submit)
     void clickToUploadVideo(){
         getActivity().startActivity(new Intent(getActivity(), ChooseNewsTypeActivity_.class));
+    }
+
+    public void loadAllVideo(){
+        fetchTimeline();
+    }
+
+    public void loadUploadedVideo(){
+        fetchTimeline();
+    }
+
+    public void loadPreparedVideo(){
+        fetchTimeline();
     }
 
 }
