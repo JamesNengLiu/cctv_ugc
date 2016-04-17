@@ -1,4 +1,4 @@
-package com.cctv.ugc.Util;
+package com.cctv.ugc.util;
 
 import android.util.Log;
 

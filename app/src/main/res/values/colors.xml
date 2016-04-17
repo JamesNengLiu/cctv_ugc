@@ -17,5 +17,10 @@
     <color name="black">#333</color>
     <color name="deepGray">#777</color>
     <color name="midGray">#aaa</color>
+
     <color name="white">#ffffff</color>
+
+    <color name="tiny_purple">#d8e2f6</color>
+    <color name="light_purple">#445f9f</color>
+
 </resources>

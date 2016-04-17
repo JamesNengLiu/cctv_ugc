@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="windowNoTitle">true</item>
     </style>
@@ -25,6 +25,30 @@
         <item name="android:background">@drawable/bottom_btn_selector</item>
         <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="NaviItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">35dp</item>
+        <item name="android:background">@drawable/navi_item_bg</item>
+    </style>
+
+    <style name="NaviIconStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="NaviItemNameStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textColor">@color/navi_text_color</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
 </resources>
