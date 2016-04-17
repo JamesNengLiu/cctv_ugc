@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--FontH1 start-->
+    <style name="FontH1">
+        <item name="android:textSize">@dimen/dp20</item>
+    </style>
+
+    <style name="FontH1.TitleBar" parent="FontH1">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="FontH1.Title" parent="FontH1">
+        <item name="android:textColor">@color/deepBule</item>
+    </style>
+    <!--FontH1 end-->
+
+    <!--FontSummary start-->
+    <style name="FontSummary">
+        <item name="android:textColor">@color/midGray</item>
+    </style>
+
+    <style name="FontSummary.Big" parent="FontSummary">
+        <item name="android:textSize">@dimen/dp16</item>
+    </style>
+
+    <style name="FontSummary.Small" parent="FontSummary">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!--FontSummary end-->
+
+</resources>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uicomponent="http://schemas.android.com/apk/res/com.cctv.ugc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp48"
+            android:gravity="center_vertical"
+            android:text="·必填·"
+            android:textAppearance="@style/FontH1.Title" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/dp16"
+            android:paddingTop="@dimen/dp16">
+
+            <com.cctv.ugc.uicomponent.RoundImageView
+                android:id="@+id/mainImg"
+                android:layout_width="@dimen/dp96"
+                android:layout_height="@dimen/dp96"
+                android:layout_marginRight="22dp"
+                uicomponent:borderRadius="2dp"
+                uicomponent:type="round" />
+
+            <LinearLayout
+                android:id="@+id/videoSizeParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/mainImg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="主画面视频"
+                    android:textAppearance="@style/FontH1"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/videoSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/FontSummary.Big" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/videoPath"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBottom="@+id/mainImg"
+                android:layout_toRightOf="@+id/mainImg"
+                android:text="Information:Gradle tasks [:app:generateDebugSources, :app:generateDebugAndroidTestSources, :app:compileDebugSources, :app:compileDebugAndroidTestSources, :uploadservice:generateDebugSources, :uploadservice:generateDebugAndroidTestSources, :uploadservice:compileDebugSources, :uploadservice:compileDebugAndroidTestSources]"
+                android:textAppearance="@style/FontSummary.Small" />
+
+            <Button
+                android:id="@+id/reChoose"
+                style="@style/Button.DeepBlue.4"
+                android:layout_below="@+id/mainImg"
+                android:layout_alignParentRight="true"
+                android:text="重新选择" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp48"
+            android:gravity="center_vertical"
+            android:text="·选填·"
+            android:textAppearance="@style/FontH1.Title" />
+
+        <LinearLayout
+            android:id="@+id/videoSecondParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="辅助画面视频1"
+                android:textAppearance="@style/FontH1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/videoSecondSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/FontSummary.Big"
+                android:text="（100MB以，选填项）"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/secondChoose"
+                style="@style/Button.DeepBlue.4"
+                android:text="选择视频" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/videoThirdParent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp62">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="辅助画面视频2"
+                android:textAppearance="@style/FontH1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/videoThirdSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/FontSummary.Big"
+                android:text="（100MB以，选填项）"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/thirdChoose"
+                style="@style/Button.DeepBlue.4"
+                android:text="选择视频" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <view
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <!--<include layout="@layout/bottom_btn"/>-->
+
+</LinearLayout>

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.cctv.ugc.R;
-import com.cctv.ugc.Util.DateUtils;
+import com.cctv.ugc.util.DateUtils;
 import com.cctv.ugc.model.VideoListItem;
 
 import org.androidannotations.annotations.EViewGroup;

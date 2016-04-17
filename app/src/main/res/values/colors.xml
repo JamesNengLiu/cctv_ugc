@@ -7,6 +7,7 @@
     <color name="deepBule">#204b99</color>
     <color name="midBule">#1e80bf</color>
     <color name="lightBule">#c6cee3</color>
+    <color name="bottomBtnPressBlue">#153164</color>
     
     <color name="btnNomal">@color/midBule</color>
     <color name="btnPress">#1a6799</color>
@@ -16,4 +17,5 @@
     <color name="black">#333</color>
     <color name="deepGray">#777</color>
     <color name="midGray">#aaa</color>
+    <color name="white">#ffffff</color>
 </resources>

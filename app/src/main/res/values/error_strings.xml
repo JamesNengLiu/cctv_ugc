@@ -2,4 +2,8 @@
 <resources>
     <!--找不到文件管理器-->
     <string name="error1">找不到文件管理器</string>
+    <!--无法录制视频-->
+    <string name="error2">无法录制视频</string>
+    <!--文件选择失败-->
+    <string name="error3">文件选择失败</string>
 </resources>

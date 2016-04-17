@@ -1,4 +1,4 @@
-package com.cctv.ugc.base;
+package com.cctv.ugc.util.forapp;
 
 import android.content.Context;
 import android.widget.Toast;

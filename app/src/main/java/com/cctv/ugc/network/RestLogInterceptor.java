@@ -1,8 +1,6 @@
 package com.cctv.ugc.network;
 
-import android.text.TextUtils;
-
-import com.cctv.ugc.Util.DebugLog;
+import com.cctv.ugc.util.DebugLog;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpRequest;
