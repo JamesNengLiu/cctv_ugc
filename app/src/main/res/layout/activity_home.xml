@@ -13,7 +13,7 @@
             android:id="@+id/layout_title"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="@color/midBule">
+            android:background="@color/deepBule">
 
             <ImageView
                 android:id="@+id/icon_navi"

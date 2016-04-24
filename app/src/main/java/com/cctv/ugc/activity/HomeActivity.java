@@ -5,10 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
+import android.widget.TextView;
 
 import com.cctv.ugc.R;
 import com.cctv.ugc.base.BaseActivity;
 import com.cctv.ugc.fragment.VideoListFragment;
+import com.cctv.ugc.util.UserUtils;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -43,10 +45,14 @@ public class HomeActivity extends BaseActivity {
     @FragmentById(R.id.video_list_fragment)
     VideoListFragment videoListFragment;
 
+    @ViewById(R.id.username)
+    TextView mUserName;
+
     View[] items;
 
     @AfterViews
     void init(){
+        mUserName.setText(UserUtils.getUserName());
         layoutAll.setSelected(true);
         videoListFragment.loadAllVideo();
         items = new View[]{layoutAll, layoutUploaded, layoutPrepared};
