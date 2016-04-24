@@ -14,5 +14,8 @@
     <dimen name="dp76">76dp</dimen>
     <dimen name="dp96">96dp</dimen>
     <!--dp end-->
-    
+
+    <dimen name="login_logo_traslate_y">-150dp</dimen>
+    <integer name="login_logo_anim_duration">2000</integer>
+
 </resources>
