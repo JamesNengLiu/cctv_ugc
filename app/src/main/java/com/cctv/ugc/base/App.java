@@ -3,6 +3,7 @@ package com.cctv.ugc.base;
 import android.content.Context;
 
 import com.cctv.ugc.Env;
+import com.cctv.ugc.util.UserUtils;
 import com.umeng.analytics.MobclickAgent;
 
 import org.litepal.LitePalApplication;
@@ -20,6 +21,7 @@ public class App extends LitePalApplication{
         LitePalApplication.initialize(this);
         MobclickAgent.setDebugMode(Env.DEBUG);
         instance = this;
+        UserUtils.init(instance);
     }
 
     public static Context getAppContext(){

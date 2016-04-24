@@ -3,7 +3,7 @@ package com.cctv.ugc.model.Response;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties({"errInfo"})
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BaseResponse<T> {
     public BaseResponse() {
         super();
