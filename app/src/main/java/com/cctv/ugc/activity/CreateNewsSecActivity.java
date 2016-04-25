@@ -84,6 +84,7 @@ public class CreateNewsSecActivity extends BaseActivity {
             case R.id.btnleft:
                 finish();
                 break;
+
         }
     }
 
