@@ -57,7 +57,7 @@ public class CreateNewsSecActivity extends BaseActivity {
         }
     }
 
-    @Click({R.id.reChoose, R.id.secondChoose, R.id.thirdChoose, R.id.bottomBtn, R.id.btnleft, R.id.btnright})
+    @Click({R.id.reChoose, R.id.secondChoose, R.id.thirdChoose, R.id.bottomBtn, R.id.btnleft})
     protected void onClick(View view) {
         int id = view.getId();
         switch (id) {
@@ -83,8 +83,6 @@ public class CreateNewsSecActivity extends BaseActivity {
                 break;
             case R.id.btnleft:
                 finish();
-                break;
-            case R.id.btnright:
                 break;
         }
     }
