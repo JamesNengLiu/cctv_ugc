@@ -1,8 +1,16 @@
 package com.cctv.ugc.fragment;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
@@ -12,6 +20,8 @@ import com.cctv.ugc.model.Response.VideoTimelineResponse;
 import com.cctv.ugc.model.VideoListItem;
 import com.cctv.ugc.network.UgcClient;
 import com.cctv.ugc.network.UgcClient_;
+import com.cctv.ugc.util.DebugLog;
+import com.cctv.ugc.util.ImageUtils;
 import com.cctv.ugc.view.adapter.VideoListAdapter;
 
 import org.androidannotations.annotations.AfterViews;
@@ -39,6 +49,7 @@ public class VideoListFragment extends Fragment {
     ProgressBar mProgress;
 
     UgcClient mClient;
+
 
     @AfterViews
     void initView(){
@@ -73,7 +84,10 @@ public class VideoListFragment extends Fragment {
 
     @Click(R.id.submit)
     void clickToUploadVideo(){
-        getActivity().startActivity(new Intent(getActivity(), ChooseNewsTypeActivity_.class));
+        Bitmap bitmap = ImageUtils.applyBlur(getActivity().getWindow());
+        Intent intent = new Intent(getActivity(), ChooseNewsTypeActivity_.class);
+        intent.putExtra("bitmap",bitmap);
+        getActivity().startActivity(intent);
     }
 
     public void loadAllVideo(){

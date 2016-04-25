@@ -25,10 +25,25 @@
             android:label="@string/title_activity_home">
         </activity>
         <activity
-            android:name=".activity.CreateNewsActivity_"
-            android:configChanges="keyboard|keyboardHidden|orientation" />
+            android:name=".activity.CreateNewsOneActivity_"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@style/AppTheme.LeftRight"/>
+        <activity
+            android:name=".activity.CreateNewsSecActivity_"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@style/AppTheme.LeftRight"
+            />
+        <activity
+            android:name=".activity.CreateNewsUploadingActivity_"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:theme="@style/AppTheme.LeftRight"
+            />
         <activity
             android:name=".activity.ChooseNewsTypeActivity_"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+
+        <activity
+            android:name=".activity.UploadCompleteActivity_"
             android:configChanges="keyboard|keyboardHidden|orientation" />
 
         <meta-data
@@ -40,6 +55,11 @@
         <meta-data
             android:name="com.cctv.ugc.base.ReaderGlideModule"
             android:value="GlideModule" />
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity android:name=".activity.LoginActivity_">
             <intent-filter>

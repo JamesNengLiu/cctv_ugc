@@ -65,11 +65,13 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         if(!TextUtils.isEmpty(UserUtils.getUserId())){
             jumpToMainActivity();
-        }else{
-            super.onCreate(savedInstanceState);
         }
+//        else{
+//            super.onCreate(savedInstanceState);
+//        }
     }
 
     @AfterViews

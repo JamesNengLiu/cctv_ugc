@@ -1,0 +1,54 @@
+1.记者证验证接口
+	URL：http://cntvnews-ugcupload-td.mtq.tvm.cn/cctvnews/api/cardverify.php?card=xxx&callback=xxxx
+	方法：get
+	参数：
+		card：记者证号(用93709377)
+		callback：jsonp用法
+	返回：
+		array("result" => 1, "desc" => '')
+		resuslt=1验证成功，否则desc是失败信息
+
+2、文件上传接口
+	URL：http://cntvnews-ugcupload-td.mtq.tvm.cn/cctvnews/api/fileupload_3.php?card=xxx&callback=xxxx
+	2.1 查询分片信息是否已经上传，主要用于断点续传，服务器对文件的判断主要是依据上传的文件名称。
+		方法：get
+		参数：
+			card：记者证号(用93709377)，刚才验证的card
+			callback：jsonp用法
+			resumableChunkNumber：第几个分片，分片序号从0开始
+			resumableChunkSize：分片大小
+			resumableFilename：上传的文件名
+		返回
+			array("jsonrpc" => "2.0","result" => 1);
+			result=1时服务器有该分片成在，否则文件分片不存在，需要重新上传该分片
+	2.2 上传文件分片
+		方法：post
+		参数：
+			card：记者证号(用93709377)，刚才验证的card，这个参数要求跟在URL里，这样后台在查询访问记录的时候可以直接提取
+			callback：jsonp用法
+			name：上传的文件名（如果有特殊要求的，可以上传这个参数，如果没有特殊要求，系统会自动使用上传的文件名。）
+			chunk：第几个分片，从0开始
+			chunks：总分片数
+		返回：
+			{"jsonrpc" : "2.0", "error" : {"code": 100, "message": "Failed to open temp directory."}, "id" : "id"}'
+			或者：array("jsonrpc" => "2.0","result" => null,"id" => "id",'descfilename'=>'2016-04-02/xxxxx.mov');
+			如果有error，证明出错。否则会返回descfilename，这个是上传后保存到目录的文件名，这个前台必须要记住，后面还会用到。
+
+3、信息保存接口
+	URL：http://cntvnews-ugcupload-td.mtq.tvm.cn/cctvnews/api/infosave_3.php?card=xxx&callback=xxxx
+	方法：post
+	参数：
+		card：记者证号(用93709377)，刚才验证的card，这个参数要求跟在URL里，这样后台在查询访问记录的时候可以直接提取
+		callback：jsonp用法
+		title：标题
+		summary：摘要
+		mobile：手机号
+		filename：原始文件名，以数组方式上传
+		descfilename：上传的视频目标文件名(2.2接口返回的文件名)，以数组方式上传
+		images：上传的图片目录文件名(2.2接口返回的文件名)，以数组方式上传
+	返回：
+		array('desc' = "提交成功！",'result' = 1)
+		如果result不等于0，则证明提交失败，desc为失败原因。
+
+参见HTML5的上传 http://cntvnews-cdn-td.mtq.tvm.cn/cctvnews/upload/
+

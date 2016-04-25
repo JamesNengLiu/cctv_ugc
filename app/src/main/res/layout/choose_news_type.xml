@@ -1,25 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chooseParent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/record"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="record" />
+        android:layout_centerInParent="true">
 
-    <Button
-        android:id="@+id/local"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="choose local" />
+        <TextView
+            android:id="@+id/record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="拍摄视频"
+            android:drawableTop="@drawable/choose_record"
+            android:drawablePadding="@dimen/dp13"
+            android:gravity="center_horizontal"/>
 
-    <Button
-        android:id="@+id/live"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="live" />
+        <TextView
+            android:id="@+id/local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="本地选取"
+            android:drawableTop="@drawable/choose_local"
+            android:layout_marginLeft="@dimen/dp36"
+            android:drawablePadding="@dimen/dp13"
+            android:gravity="center_horizontal"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="开始直播"
+            android:drawableTop="@drawable/choose_live"
+            android:layout_marginLeft="@dimen/dp36"
+            android:drawablePadding="@dimen/dp13"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <Button android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        style="@style/Button.BottomBtn"
+        android:id="@+id/bottomBtn"
+        android:text="取消"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

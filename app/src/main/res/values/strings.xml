@@ -26,4 +26,7 @@
     <string name="login_fail_password">请输入密码</string>
 
 
+
+    <string name="uploading_des">你上传的视频内容《%s》正在上传\n请稍等...</string>
+    <string name="uploaded_des">你上传的视频内容《%1s》在\n上传成功</string>
 </resources>

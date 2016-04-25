@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white">
+
+    <include layout="@layout/title_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在上传"
+        android:textAppearance="@style/FontH1.Title"
+        android:layout_marginTop="@dimen/dp70"/>
+
+    <com.cctv.ugc.uicomponent.UploadingProgressView
+        android:layout_width="@dimen/dp62"
+        android:layout_height="@dimen/dp12"
+        android:id="@+id/uploadingProgress"
+        android:layout_marginTop="@dimen/dp24"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_uploading"
+        android:layout_marginTop="@dimen/dp24"/>
+
+    <TextView
+        android:id="@+id/uploadingDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/FontSummary.Small"
+        android:layout_marginTop="@dimen/dp28"
+        />
+</LinearLayout>

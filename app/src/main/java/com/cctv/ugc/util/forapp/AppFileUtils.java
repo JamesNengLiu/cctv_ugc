@@ -3,6 +3,7 @@ package com.cctv.ugc.util.forapp;
 import android.os.Environment;
 
 import com.cctv.ugc.account.LoginManager;
+import com.cctv.ugc.base.App;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,20 +13,22 @@ import java.io.IOException;
  */
 public class AppFileUtils {
 
-    private static final String RECORD_FILE_DIR = Environment.getExternalStorageDirectory() + "/recordVideo/";
+//    private static final String RECORD_FILE_DIR = Environment.getExternalStorageDirectory() + "/recordVideo/";
+
+    private static final String RECORD_FILE_DIR = App.getAppContext().getExternalFilesDir(Environment.DIRECTORY_MOVIES).getAbsolutePath();
 
     static {
         checkToCreateRecordFileDir();
     }
 
     public static String createRecordFileSimpleName() {
-        return LoginManager.getInstance().getIdentity() + System.currentTimeMillis()+".mp4";
+        return LoginManager.getInstance().getIdentity() + System.currentTimeMillis() + ".mp4";
     }
 
     public static File createRecordFile() throws IOException {
         String path = getRecordFileDir() + "/" + createRecordFileSimpleName();
         File file = new File(path);
-        if(file.exists()){
+        if (file.exists()) {
             file.delete();
         }
         file.createNewFile();
@@ -42,4 +45,5 @@ public class AppFileUtils {
             file.mkdir();
         }
     }
+
 }

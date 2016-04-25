@@ -23,4 +23,6 @@
     <color name="tiny_purple">#d8e2f6</color>
     <color name="light_purple">#445f9f</color>
 
+    <color name="transparent">#00ffffff</color>
+
 </resources>

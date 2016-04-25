@@ -2,7 +2,7 @@
 <resources>
     <!--FontH1 start-->
     <style name="FontH1">
-        <item name="android:textSize">@dimen/dp20</item>
+        <item name="android:textSize">@dimen/dp16</item>
     </style>
 
     <style name="FontH1.TitleBar" parent="FontH1">
@@ -20,7 +20,7 @@
     </style>
 
     <style name="FontSummary.Big" parent="FontSummary">
-        <item name="android:textSize">@dimen/dp16</item>
+        <item name="android:textSize">@dimen/dp14</item>
     </style>
 
     <style name="FontSummary.Small" parent="FontSummary">

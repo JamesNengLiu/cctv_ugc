@@ -14,6 +14,8 @@ public class UserUtils {
 
     public static final String KEY_USER_ID = "key_user_id";
 
+    public static final String KEY_UPLOAD_PHONENUM = "key_upload_phonenum";
+
 
     private static SharedPreferences sSharedPreferences;
 
@@ -42,5 +44,11 @@ public class UserUtils {
         sSharedPreferences.edit().putString(KEY_USER_ID, username).commit();
     }
 
+    public static void saveUploadPhoneNum(String phoneNum){
+        sSharedPreferences.edit().putString(KEY_UPLOAD_PHONENUM, phoneNum).commit();
+    }
+    public static String getSavedPhoneNum(){
+        return sSharedPreferences.getString(KEY_UPLOAD_PHONENUM,null);
+    }
 
 }
